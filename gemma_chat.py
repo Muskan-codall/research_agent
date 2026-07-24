@@ -3,7 +3,7 @@ import ollama
 def ask_gemma(prompt):
 
     response = ollama.chat(
-        model="gemma4:12b",
+        model="gemma3:1b",
         messages=[
             {
                 "role": "user",
