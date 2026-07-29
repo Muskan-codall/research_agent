@@ -1,21 +1,22 @@
 import ollama
 
+
 def generate_notes(topic):
 
     prompt = f"""
-    Generate short study notes on:
+    Generate short and easy-to-understand study notes on the following topic:
 
     {topic}
     """
 
     response = ollama.chat(
-        model='gemma3:1b',
+        model="gemma3b:1b",
         messages=[
             {
-                'role':'user',
-                'content':prompt
+                "role": "user",
+                "content": prompt
             }
         ]
     )
 
-    return response['message']['content']
+    return response["message"]["content"]

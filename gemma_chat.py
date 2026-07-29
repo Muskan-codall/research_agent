@@ -13,8 +13,3 @@ def ask_gemma(prompt):
     )
 
     return response["message"]["content"]
-
-
-question = input("You : ")
-
-print(ask_gemma(question))
